@@ -4,10 +4,6 @@ var NewHelper = {
 
 		button.anchor.setTo(anchorX, anchorY);
 
-		if (onInputOverEvent != null) {
-			button.onInputOver.add(onInputOverEvent, this);
-		}
-
 		return button;
 	},
 
