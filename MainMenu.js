@@ -1,11 +1,11 @@
-game.MainMenu = function (game) { };
+game.mainMenu = function (game) { };
 
-game.MainMenu.prototype = {
+game.mainMenu.prototype = {
 	create: function () {
 		this.stage.backgroundColor = "#2448a0";
 		this.world.setBounds(this.game.width, this.game.height);
 
-		this.MainMenu = this.add.group();
+		this.mainMenu = this.add.group();
 		this.settingsMenu = this.add.group();
 
 		this.createMenu();
@@ -16,7 +16,7 @@ game.MainMenu.prototype = {
 		var buttonHeight = 100;
 		var offset = 100;
 
-		var mainMenu = ["Start gry", "Ustawienia", "Informacje"];
+		var mainMenuOptions = ["Start gry", "Ustawienia", "Informacje"];
 		var settings = ["Zmień głośność", "Czyść postęp"];
 		var info = "Info Text";
 		var back = "Powrót";
@@ -24,17 +24,17 @@ game.MainMenu.prototype = {
 		var mmCallbacks = [function () { this.state.start("Gameplay"); }, function () { this.switchWindow(1); }, function () { this.switchWindow(2); }];
 		var smCallbacks = [this.changeVolume, this.reserProgress];
 
-		for (var m = 0; m < mainMenu.length; m++) {
+		for (var m = 0; m < mainMenuOptions.length; m++) {
 			var button = NewHelper.newButton(this.game.width * 0.5, this.game.height * 0.5 + (buttonHeight * m) - offset, "Button", mmCallbacks[m], this);
-			var text = NewHelper.newText(button.x, button.y, mainMenu[m]);
+			var text = NewHelper.newText(button.x, button.y, mainMenuOptions[m]);
 
-			this.MainMenu.add(button);
-			this.MainMenu.add(text);
+			this.mainMenu.add(button);
+			this.mainMenu.add(text);
 		}
 
 		for (var m = 0; m < settings.length; m++) {
 			var button = NewHelper.newButton(this.game.width * 0.5, this.game.height * 0.5 + (buttonHeight * m) - offset, "Button", smCallbacks[m], this);
-			var text = NewHelper.newText(button.x, button.y, mainMenu[m]);
+			var text = NewHelper.newText(button.x, button.y, mainMenuOptions[m]);
 
 			this.settingsMenu.add(button);
 			this.settingsMenu.add(text);
