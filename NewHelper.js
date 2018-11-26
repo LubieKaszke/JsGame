@@ -1,8 +1,11 @@
 var NewHelper = {
-	newButton: function (x, y, key, callback, onInputOverEvent = null, anchorX = 0.5, anchorY = 0.5) {
-		var button = game.add.button(x, y, key, callback, this, 0, 1, 2, 3);
+	newButton: function (x, y, key, callback, anchorX = 0.5, anchorY = 0.5) {
+		var button = game.add.button(x, y, key, callback, 'button', 0, 1, 2, 3);
 
 		button.anchor.setTo(anchorX, anchorY);
+		// if(onInputOverEvent != null){
+		// 	button.onInputOver.add(onInputOverEvent,this);
+		// }
 
 		return button;
 	},

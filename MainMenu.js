@@ -1,6 +1,6 @@
 var MainMenu = function (game) { };
 
-MainMenu.prototype = {
+game.MainMenu.prototype = {
 	create: function () {
 		this.stage.backgroundColor = "#2448a0";
 		this.world.setBounds(this.game.width, this.game.height);
@@ -26,7 +26,7 @@ MainMenu.prototype = {
 		for (var m = 0; m < mainMenuOptions.length; m++) {
 			var button = NewHelper.newButton(this.game.width * 0.5, this.game.height * 0.5 + (buttonHeight * m) - offset, 'button', mmCallbacks[m], this);
 			var text = NewHelper.newText(button.x, button.y, mainMenuOptions[m]);
-			console.log("created");
+			console.log(button);
 			this.mainMenu.add(button);
 			this.mainMenu.add(text);
 		}
@@ -34,7 +34,6 @@ MainMenu.prototype = {
 		for (var m = 0; m < settings.length; m++) {
 			var button = NewHelper.newButton(this.game.width * 0.5, this.game.height * 0.5 + (buttonHeight * m) - offset, 'button', smCallbacks[m], this);
 			var text = NewHelper.newText(button.x, button.y, mainMenuOptions[m]);
-
 			this.settingsMenu.add(button);
 			this.settingsMenu.add(text);
 		}
@@ -50,7 +49,7 @@ MainMenu.prototype = {
 		this.settingsMenu.setAll("visible", id === 1);
 
 		this.infoText.visible = (id === 2);
-		this.backButton.visible = this.backText.visible = (id != 0);
+		this.backButton.visible = this.backText.visible = (id !== 0);
 	},
 
 	changeVolume: function () {
