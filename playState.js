@@ -53,12 +53,12 @@ playState.prototype = {
         for(var i =0; i<data.level.length ;i++){
             for(var j=0; j<data.level[i].length; j++){
                 if(data.level[i][j] == 'x'){
-                    var wall = game.add.sprite(30+20*j,30+20*i,'wall');
+                    var wall = game.add.sprite(30+25*j,30+25*i,'wall');
                     this.walls.add(wall);
                     wall.body.immovable =true;
                 }
                 else if(data.level[i][j]=='!'){
-                    var enemy = game.add.sprite(30+20*j,30+20*i,'enemy');
+                    var enemy = game.add.sprite(30+25*j,30+25*i,'enemy');
                     this.enemies.add(enemy);
                 }
             }

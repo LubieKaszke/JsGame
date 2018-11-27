@@ -1,5 +1,4 @@
 function Load(){}
-
 Load.prototype ={
 
     preload: function() {
@@ -13,9 +12,15 @@ Load.prototype ={
 		this.game.load.json('level:3', 'data/level03.json');
 		this.game.load.json('level:4', 'data/level04.json');
         game.load.script('webfont', '//ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js');
+        game.load.audio('music', 'assets/music.mp3');
     },
     create: function(){
         // this.game.state.start('play', true, false, {level: 0});
         game.state.start('menu');
-    }
+    },
+    addGameMusic: function () {
+        musicPlayer = game.add.audio('dangerous');
+        musicPlayer.loop = true;
+        musicPlayer.play();
+      }
 }
