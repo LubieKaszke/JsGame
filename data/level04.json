@@ -1,0 +1,31 @@
+{
+    "playerStart": {"x":200, "y":100},
+    "doppStart": {"x":670, "y":60},
+    "level": [
+        "                           x              ",
+        "                           x              ",
+        "                           x              ",
+        "                    !      xxx            ",
+        "                    !      xxxxxxxxx      ",
+        "       xxxxx        xx     xxxxxxxxxx     ",
+        "        xxx         x      xxxxxxxxxx     ",
+        "         x         x                      ",
+        "                   x                     x",
+        "             xx    x                    x ",
+        "             xxxxxxx                   x  ",
+        "             xxxxxxx                 xxx  ",
+        "                    !          xxxxxxxxx  ",
+        "                   !!!                    ",
+        "                    !                     ",
+        "                                          ",
+        "                                          ",
+        "      xxxxxxxx                            ",
+        "       xxxxxx                             ",
+        "        xxxx                              ",
+        "         xx                               ",
+        "               xx    xxxxxxx              ",
+        "                      xxxxx               ",
+        "                     xxxxxxx              ",
+        "                                          "
+    ]
+}

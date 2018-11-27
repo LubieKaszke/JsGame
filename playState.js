@@ -1,5 +1,5 @@
 function playState() {}
-const LEVEL_COUNT = 2;
+const LEVEL_COUNT = 5;
 
 playState.prototype = {
     init: function(data){
@@ -14,6 +14,7 @@ playState.prototype = {
         this.cursor =game.input.keyboard.createCursorKeys();
         this._loadLevel(this.game.cache.getJSON(`level:${this.level}`));
         this._loadPlayer(this.game.cache.getJSON(`level:${this.level}`));
+		
     },
     update: function() {  
         // Here we update the game 60 times per second
@@ -41,7 +42,8 @@ playState.prototype = {
             this.player.body.velocity.y = -250;
 
             if (this.cursor.up.isDown && this.dopp.body.touching.down) 
-            this.dopp.body.velocity.y = -250;
+				this.dopp.body.velocity.y = -250;
+            
     },
     _loadLevel: function(data){
         
@@ -65,8 +67,16 @@ playState.prototype = {
     _loadPlayer: function(data){
         this.player= game.add.sprite(data.playerStart.x,data.playerStart.y,'player');
         this.player.body.gravity.y =600;
+		this.player.checkWorldBounds = true;
+		this.player.events.onOutOfBounds.add(function(){
+			this.restart();
+		}, this);
         this.dopp = game.add.sprite(data.doppStart.x,data.doppStart.y,'player');
         this.dopp.body.gravity.y=600;
+		this.dopp.checkWorldBounds = true;
+		this.dopp.events.onOutOfBounds.add(function(){
+			this.restart();
+		}, this);
     },
     win: function(){
         game.state.restart(true, false, { level: this.level + 1 });
