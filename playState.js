@@ -3,7 +3,7 @@ const LEVEL_COUNT = 5;
 
 playState.prototype = {
     init: function(data){
-        game.stage.backgroundColor = '#3598db';
+        game.stage.backgroundColor = '#070055';
         game.physics.startSystem(Phaser.Physics.ARCADE);
         game.world.enableBody = true;
         this.cursor =game.input.keyboard.createCursorKeys();

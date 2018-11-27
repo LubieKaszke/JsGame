@@ -5,13 +5,14 @@ var style;
 
   // the variables declared here will not be scoped anywhere and will only be accessible in this wrapped function
   var defaultColor = "white",
-    highlightColor = "#FEFFD5";
+    highlightColor = "#ef7335";
 
   style = {
     navitem: {
       base: {
-        font: '30pt TheMinion',
-        align: 'left',
+        font: 'bold 22pt sans-serif',
+        align: 'center',
+        boundsAlignH: "center",
         srokeThickness: 4
       },
       default: {

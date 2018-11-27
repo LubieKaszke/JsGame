@@ -1,10 +1,6 @@
-function Boot() {};
+var game = new Phaser.Game(900, 600, Phaser.AUTO, 'game');
 
-var   gameOptions = {
-    playSound: true,
-    playMusic: true
-  },
-  musicPlayer;
+function Boot() {};
 
 Boot.prototype = {
 
