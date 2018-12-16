@@ -9,9 +9,13 @@ Load.prototype ={
 
     preload: function() {
             this.loadingBar = game.make.sprite(game.world.centerX,400,"loading");
-            game.load.image('player','assets/player.png');
-            game.load.image('wall','assets/wall.png');
-            game.load.image('enemy','assets/enemy.png');
+            // game.load.image('player','assets/player.png');
+            game.load.image('wall','assets/block.png');
+            game.load.image('enemy','assets/enemy2.png');
+            game.load.image('slime','assets/slime.png');
+            game.load.image('bg','assets/bg.jpg');
+            this.game.load.atlasJSONHash('player', 'assets/spritesheet.png', 'assets/sprites.json');
+            this.game.load.atlasJSONHash('dopp', 'assets/spritesheet1.png', 'assets/sprites1.json');
             // game.load.image('loading','assets/loadingBar.png');
             this.game.load.json('level:0', 'data/level00.json');
             this.game.load.json('level:1', 'data/level01.json');
