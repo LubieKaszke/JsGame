@@ -1,0 +1,44 @@
+{"frames": {
+
+"snakeLava.png":
+{
+	"frame": {"x":0,"y":0,"w":53,"h":147},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":53,"h":147},
+	"sourceSize": {"w":53,"h":147}
+},
+"snakeLava_ani.png":
+{
+	"frame": {"x":53,"y":0,"w":52,"h":147},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":52,"h":147},
+	"sourceSize": {"w":52,"h":147}
+},
+"snakeSlime.png":
+{
+	"frame": {"x":0,"y":147,"w":53,"h":147},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":53,"h":147},
+	"sourceSize": {"w":53,"h":147}
+},
+"snakeSlime_ani.png":
+{
+	"frame": {"x":53,"y":147,"w":52,"h":147},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":52,"h":147},
+	"sourceSize": {"w":52,"h":147}
+}},
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "ziut.png",
+	"format": "RGBA8888",
+	"size": {"w":105,"h":294},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:f988e9428f3064ef0f9d27e806885230:a7cc9d7bc752fc3d9bcf0c3ebf39bc06:194bf456c54feadf9e649cc9557b6e3b$"
+}
+}
