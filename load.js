@@ -14,6 +14,7 @@ Load.prototype ={
             game.load.image('player','assets/player.png');
             game.load.image('wall','assets/wall.png');
             game.load.image('enemy','assets/enemy.png');
+            game.load.image('arrow','assets/arow.png');
             game.load.image('loading','assets/loadingBar.png');
             this.game.load.json('level:0', 'data/level00.json');
             this.game.load.json('level:1', 'data/level01.json');

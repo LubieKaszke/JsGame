@@ -3,10 +3,10 @@ var MainMenu = function() {};
 MainMenu.prototype = {
   init: function () {
 	game.stage.backgroundColor = '#070055';
-	titleStyle = { font: 'bold 80px sans-serif', fill: '#ffffff', align: 'center'},
-	text = game.add.text(game.world.centerX, 120, "JOIN ME", titleStyle);
-	menuImage1 = game.add.sprite(230, 120, 'player');
-	menuImage2 = game.add.sprite(670, 120, 'player');
+	titleStyle = { font: 'bold 100px sans-serif', fill: '#ffffff', align: 'center'},
+	text = game.add.text(game.world.centerX, 200, "JOIN ME", titleStyle);
+	menuImage1 = game.add.sprite(game.world.centerX -250, 200, 'player');
+	menuImage2 = game.add.sprite(game.world.centerX +250, 200, 'player');
 	text.anchor.set(0.5);
 	this.optionCount = 1;
   },
@@ -24,17 +24,17 @@ MainMenu.prototype = {
 		this.game.state.start('play', true, false, {level: 0});
     });
     this.addMenuOption('How to Play', function () {
-		this.game.state.start('play', true, false, {level: 2});
+		this.game.state.start('how', true, false, {level: 2});
     });
 	
 	var playMusic= gameOptions.playMusic;
 	var textmode = 1;
 
-	this.addMenuOption(playMusic ? 'Mute Music' : 'Play Music', function (target) {
-	  playMusic = !playMusic;
-	  target.text = playMusic ? 'Mute Music' : 'Play Music';
-	  musicPlayer.volume = playMusic ? 1 : 0;
-	});
+	// this.addMenuOption(playMusic ? 'Mute Music' : 'Play Music', function (target) {
+	//   playMusic = !playMusic;
+	//   target.text = playMusic ? 'Mute Music' : 'Play Music';
+	//   musicPlayer.volume = playMusic ? 1 : 0;
+	// });
 
 	this.addMenuOption(textmode ? 'Mode : text' : 'Mode : grahpics', function (target) {
 		textmode = !textmode;
@@ -51,7 +51,7 @@ MainMenu.prototype = {
   },
 
   addMenuOption: function(text, callback) {
-		var txt = game.add.text(450, (this.optionCount * 60) + 300, text, style.navitem.default);
+		var txt = game.add.text(game.world.centerX, (this.optionCount * 60) + 300, text, style.navitem.default);
 		txt.anchor.set(0.5);
     txt.inputEnabled = true;
     txt.events.onInputUp.add(callback);

@@ -20,8 +20,8 @@ var style;
         stroke: 'rgba(0,0,0,0)'
       },
       inverse: {
-        fill: 'black',
-        stroke: 'black'
+        fill: '#ef7335',
+        stroke: '#ef7335'
       },
       hover: {
         fill: highlightColor,

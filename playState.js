@@ -2,6 +2,11 @@ function playState() {}
 const LEVEL_COUNT = 5;
 
 playState.prototype = {
+    menuConfig: {
+        className: "invert",
+        startY: 400,
+        startX: 400
+      },
     init: function(data){
         game.stage.backgroundColor = '#070055';
         game.physics.startSystem(Phaser.Physics.ARCADE);
@@ -86,3 +91,5 @@ playState.prototype = {
     }
 
 }
+
+Phaser.Utils.mixinPrototype(playState.prototype, mixins);
