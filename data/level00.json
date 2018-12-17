@@ -1,14 +1,26 @@
 {
-    "playerStart": {"x":82, "y":100},
-    "doppStart": {"x":512, "y":100},
+    "playerStart": {"x":100, "y":400},
+    "doppStart": {"x":700, "y":400},
     "level": [
-        "xxxxxxxxxxxxxxxxxxxxxxx",
-        "x          !          x",
-        "x                     x",
-        "x                     x",
-        "x                     x",
-        "x          !          x",
-        "xxxxxxxxxxxxxxxxxxxxxxx"
+        "                     ",
+        "                     ",
+        "                     ",
+        "                     ",
+        "                     ",
+        "                     ",
+        "                     ",
+        "                     ",
+        "                     ",
+        "                     ",
+        "                     ",
+        "                     ",
+        "                     ",
+        "                     ",
+        "                     ",
+        "                     ",
+        "                     ",
+        "                     ",
+        "xxxxxxxx     xxxxxxxx"
     ]
 }
 
